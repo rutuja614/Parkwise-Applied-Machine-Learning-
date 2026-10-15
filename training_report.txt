@@ -1,0 +1,28 @@
+ParkWise training report - 14 Oct 2026, 20:45
+Data: Synthetic sample data
+Rows: 10752 train / 2688 test
+
+            Model  CV MAE  Test MAE  Test R2  Train time (s)
+Linear Regression   9.242     9.032   0.5387             0.2
+    Decision Tree   2.165     2.108   0.9727             0.1
+    Random Forest   2.111     2.092   0.9731             1.7
+Gradient Boosting   2.057     2.046   0.9748             3.4
+
+Selected model : Gradient Boosting
+Test MAE       : 2.046 spaces (baseline 12.053)
+Test R2        : 0.9748
+90% interval   : +/-5 spaces
+
+MAE by zone    : Main Gate Parking=3.21, Library Parking=1.93, Canteen Parking=1.66, Staff Parking=1.33
+
+Feature importance:
+  hour                        0.352
+  capacity                    0.273
+  day_of_week                 0.220
+  area_Canteen Parking        0.085
+  special_event               0.041
+  rain                        0.015
+  area_Library Parking        0.011
+  area_Staff Parking          0.004
+  is_weekend                  0.000
+  area_Main Gate Parking      0.000
